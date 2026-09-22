@@ -1,7 +1,64 @@
-const students=["john wick", "jane doe", "alice smith", "bob brown", "charlie davis"];
+const studentNames=["john wick", "jane doe", "alice smith", "bob brown", "charlie davis"];
 const ids=[1, 2, 3, 4, 5];
 const active=[true, false, true, false, true];
 
-console.log("ban dau: ", students[0]);
-students[0]="hoadv";
-console.log("sau khi thay doi: ", students[0]);
+console.log("ban dau: ", studentNames[0]);
+studentNames[0]="hoadv";
+// studentNames="hoadv";
+// console.log("sau khi thay doi: ", studentNames[0]);
+console.log("do dai array: ", studentNames.length);
+
+studentNames.push("new student");
+console.log("sau khi thay doi: ", studentNames);
+
+for(let i=0; i<studentNames.length; i++){
+    console.log("student: ", studentNames[i]);
+}
+
+const student = {
+  id: 1,
+  name: "Nguyễn Văn An",
+  age: 20,
+  email: "an@gmail.com",
+  major: "CNTT",
+};
+console.log("student: ", student);
+console.log("student name: ", student.name);
+console.log("student age: ", student.age);
+console.log("student email: ", student.email);
+student.age = 21;
+student.phone = "0123456789";
+
+const students = [
+  {
+    id: 1,
+    name: "Nguyễn Văn An",
+    age: 20,
+  },
+  {
+    id: 2,
+    name: "Trần Văn Bình",
+    age: 21,
+  },
+  {
+    id: 3,
+    name: "Lê Văn Nam",
+    age: 20,
+  },
+];
+console.log("Danh sách sinh viên:");
+for (let i = 0; i < students.length; i++) {
+  console.log(students[i]);
+}
+console.log("Tên sinh viên đầu tiên:", students[0].name);
+console.log("Tuổi sinh viên thứ hai:", students[1].age);
+for (let i = 0; i < students.length; i++) {
+  console.log("Tên sinh viên:", students[i].name);
+}
+let html=document.getElementById("students");
+let content='';
+for(let i=0; i<students.length; i++){
+    content+=`Tên sinh viên: ${students[i].name}<br>ID sinh viên: ${students[i].id}<br>`;
+}
+html.innerHTML=content;
+console.log(html);
