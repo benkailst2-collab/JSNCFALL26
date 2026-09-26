@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="vi">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -27,41 +27,23 @@
         <table class="w-full border border-gray-300 rounded-lg">
           <thead class="bg-gray-100">
             <tr>
+              <th class="px-4 py-2 border border-gray-300">STT</th>
               <th class="px-4 py-2 border border-gray-300">ID</th>
-              <th class="px-4 py-2 border border-gray-300">Name</th>
-              <th class="px-4 py-2 border border-gray-300">Age</th>
-              <th class="px-4 py-2 border border-gray-300">Actions</th>
+              <th class="px-4 py-2 border border-gray-300">Tên sản phẩm</th>
+              <th class="px-4 py-2 border border-gray-300">Giá</th>
+              <th class="px-4 py-2 border border-gray-300">Danh mục</th>
             </tr>
           </thead>
 
-          <tbody id="students">
-            <tr class="hover:bg-gray-50">
-              <td class="px-4 py-2 border border-gray-300">1</td>
-              <td class="px-4 py-2 border border-gray-300">Name</td>
-              <td class="px-4 py-2 border border-gray-300">33</td>
-              <td class="px-4 py-2 border border-gray-300">
-                <div class="flex items-center justify-center gap-2">
-                  <a
-                    href="#"
-                    class="bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded"
-                  >
-                    Edit
-                  </a>
-
-                  <button
-                    class="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded"
-                  >
-                    Delete
-                  </button>
-                </div>
-              </td>
+          <tbody id="products">
+            <tr>
+              <td colspan="5" class="px-4 py-2">Đang tải danh sách sản phẩm...</td>
             </tr>
           </tbody>
         </table>
       </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.7/axios.min.js"></script>
-    <script src="lab1.js"></script>
-    <script src="lab2.js"></script>
+    <script src="lab4.js"></script>
   </body>
 </html>
