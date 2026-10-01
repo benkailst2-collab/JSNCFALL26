@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="vi">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,6 +16,7 @@
         <div class="hidden md:flex items-center space-x-8">
           <a href="index.html" class="hover:text-gray-200">Danh sách</a>
           <a href="add.html" class="hover:text-gray-200">Thêm mới</a>
+          <a href="register.html" class="hover:text-gray-200">Đăng ký</a>
         </div>
         <div class="hidden md:flex items-center space-x-6"></div>
       </div>
@@ -32,19 +33,44 @@
               <th class="px-4 py-2 border border-gray-300">Tên sản phẩm</th>
               <th class="px-4 py-2 border border-gray-300">Giá</th>
               <th class="px-4 py-2 border border-gray-300">Danh mục</th>
-              <th class="px-4 py-2 border border-gray-300">Thao tác</th>
+              <th class="px-4 py-2 border border-gray-300">Thương hiệu</th>
+              <th class="px-4 py-2 border border-gray-300">Số lượng</th>
+              <th class="px-4 py-2 border border-gray-300">trạng thái</th>
             </tr>
           </thead>
 
-          <tbody id="products">
-            <tr>
-              <td colspan="6" class="px-4 py-2">Đang tải danh sách sản phẩm...</td>
+          <tbody id="movie-list">
+            <tr class="hover:bg-gray-50">
+              <td class="px-4 py-2 border border-gray-300">1</td>
+              <td class="px-4 py-2 border border-gray-300">
+                JavaScript Cơ Bản
+              </td>
+              <td class="px-4 py-2 border border-gray-300">30</td>
+              <td class="px-4 py-2 border border-gray-300">
+                <img src="https://picsum.photos/300/200?random=1" />
+              </td>
+              <td class="px-4 py-2 border border-gray-300">Frontend</td>
+              <td class="px-4 py-2 border border-gray-300">
+                <div class="flex items-center justify-center gap-2">
+                  <button
+                    class="bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded"
+                  >
+                    Edit
+                  </button>
+
+                  <button
+                    class="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded"
+                  >
+                    Delete
+                  </button>
+                </div>
+              </td>
             </tr>
           </tbody>
         </table>
       </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.7/axios.min.js"></script>
-    <script src="lab4.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>

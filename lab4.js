@@ -26,7 +26,7 @@ axios
     if (data.length === 0) {
       productList.innerHTML = `
         <tr>
-          <td colspan="5" class="px-4 py-2">Chưa có sản phẩm.</td>
+          <td colspan="6" class="px-4 py-2">Chưa có sản phẩm.</td>
         </tr>
       `;
       return;
@@ -45,6 +45,22 @@ axios
                 : product.price,
             )}</td>
             <td class="px-4 py-2 border border-gray-300">${escapeHtml(product.category)}</td>
+            <td class="px-4 py-2 border border-gray-300">
+              <div class="flex items-center justify-center gap-2">
+                <button
+                  type="button"
+                  class="bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded"
+                >
+                  Sửa
+                </button>
+                <button
+                  type="button"
+                  class="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded"
+                >
+                  Xóa
+                </button>
+              </div>
+            </td>
           </tr>
         `,
       )
@@ -56,7 +72,7 @@ axios
     if (productList) {
       productList.innerHTML = `
         <tr>
-          <td colspan="5" class="px-4 py-2 text-red-600">
+          <td colspan="6" class="px-4 py-2 text-red-600">
             Không tải được danh sách sản phẩm. Hãy kiểm tra json-server.
           </td>
         </tr>
