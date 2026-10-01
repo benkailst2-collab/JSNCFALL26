@@ -54,6 +54,7 @@ axios
                   Sửa
                 </button>
                 <button
+                  onclick="deleteproduct(${products.id})"
                   type="button"
                   class="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded"
                 >
@@ -79,3 +80,16 @@ axios
       `;
     }
   });
+
+  function deleteproduct(id){
+    const result = confirm("Bạn có chắc chắn muốn xóa sản phẩm này không?");
+    console.log(result);
+    if(result){
+      axios.delete(`http://localhost:3000/products/${id}`).then(()=>{
+        alert("Xóa thành công");
+      })
+      .catch(()=>{
+        alert("Xóa thất bại");
+      });
+    }
+  }
