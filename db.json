@@ -31,18 +31,6 @@
       "name": "Samsung Galaxy S23",
       "price": 15000000,
       "category": "Điện thoại"
-    },
-    {
-      "id": 3,
-      "name": "Xiaomi 14",
-      "price": 12000000,
-      "category": "Điện thoại"
-    },
-    {
-      "name": "sadsa",
-      "price": "321312",
-      "category": "đá",
-      "id": 4
     }
   ]
 }

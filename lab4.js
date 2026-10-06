@@ -47,14 +47,15 @@ axios
             <td class="px-4 py-2 border border-gray-300">${escapeHtml(product.category)}</td>
             <td class="px-4 py-2 border border-gray-300">
               <div class="flex items-center justify-center gap-2">
-                <button
+                <a
+                  href="edit.html?id=${product.id}"
                   type="button"
                   class="bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded"
                 >
                   Sửa
-                </button>
+                </a>
                 <button
-                  onclick="deleteproduct(${products.id})"
+                  onclick="deleteproduct(${product.id})"
                   type="button"
                   class="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded"
                 >
