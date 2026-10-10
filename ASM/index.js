@@ -11,11 +11,14 @@ axios.get("http://localhost:3000/pitches").then((response)=>{
               <td class="px-4 py-2 border border-gray-300">${pitches.price * 2}VNĐ</td>
               <td class="px-4 py-2 border border-gray-300">
                 <div class="flex items-center justify-center gap-2">
-                  <button class="bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded">
+                  <a
+                  href="edit.html?id=${pitches.id}"
+                  class="bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded">
                     Edit
-                  </button>
+                  </a>
 
-                  <button class="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded" onclick='deletepitch(${pitches.id})'>
+                  <button class="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded" 
+                  onclick='deletepitch("${pitches.id}")'>
                     Delete
                   </button>
                 </div>

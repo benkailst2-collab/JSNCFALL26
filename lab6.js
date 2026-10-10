@@ -1,11 +1,22 @@
 const id=new URLSearchParams(location.search).get("id");
-axios.get(`http://localhost:3000/products/${id}`).then((response)=>{
-    console.log(response);
-    const product=response.data;
-    document.getElementById("name").value=product.name;
-    document.getElementById("price").value=product.price;
-    document.getElementById("category").value=product.category;
-});
+// axios.get(`http://localhost:3000/products/${id}`).then((response)=>{
+//     console.log(response);
+//     const product=response.data;
+//     document.getElementById("name").value=product.name;
+//     document.getElementById("price").value=product.price;
+//     document.getElementById("category").value=product.category;
+// });
+async function get(){
+    try{
+        const response=await axios.get(`http://localhost:3000/products/${id}`);
+        const product=response.data;
+        document.getElementById("name").value=product.name;
+        document.getElementById("price").value=product.price;
+        document.getElementById("category").value=product.category;
+    } catch (error) {
+        console.error("Error fetching product:", error);
+    }
+}
 document.getElementById("form-edit").addEventListener("submit", (event) => {
     event.preventDefault();
     const name = document.getElementById("name").value;

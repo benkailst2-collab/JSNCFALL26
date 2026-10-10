@@ -55,7 +55,7 @@ axios
                   Sửa
                 </a>
                 <button
-                  onclick="deleteproduct(${product.id})"
+                  onclick="deleteproduct('${product.id}')"
                   type="button"
                   class="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded"
                 >
