@@ -1,5 +1,6 @@
 document.getElementById("name").value;
 document.getElementById("form-add").addEventListener("submit", (event)=>{
+    event.preventDefault();
     const name = document.getElementById("name").value;
     const price = document.getElementById("price").value;
     const category = document.getElementById("category").value;
